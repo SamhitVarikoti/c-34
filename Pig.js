@@ -5,7 +5,7 @@ class Pig extends BaseClass {
     this.visiblity = 255
   }
  display(){
-    console.log(this.body.speed);
+    //console.log(this.body.speed);
     if(this.body.speed > 3){
       World.remove(world,this.body);
       push();
@@ -18,5 +18,11 @@ class Pig extends BaseClass {
       super.display();
     }
    
+  }
+  score(){
+    if(this.visiblity<0 && this.visiblity>-1005){
+     
+      score++
+    }
   }
 };
